@@ -17,7 +17,7 @@ More information: https://developers.google.com/analytics/devguides/collection/g
 
 ## Example
 
-'''
+```
 <a href="#" ga-click-event-track-multiplicity="1" data-ga-click-event-category="Videos" data-ga-click-event-action="Play" data-ga-click-event-label="Rick astley - never gonna give you up">Play</a>
 
 <script type="text/javascript">
@@ -38,4 +38,4 @@ $(document).ready(function()
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-'''
+```
