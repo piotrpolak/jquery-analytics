@@ -15,10 +15,24 @@ Google Analytics event tracking defined in HTML made easy
 
 More information: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
 
-## Example
+## Examples
+
+## Push event on every click
+```html
+<!-- When clicked, a new "Button click" event will be pushed -->
+<button data-ga-click-event-category="Button click">Button</button>
+```
+
+## Push event on the first click
+```html
+<!-- When clicked, a new "Button click" event will be pushed -->
+<button data-ga-click-event-category="Button click" ga-click-event-track-multiplicity="1">Button</button>
+```
+
+### A complete example
 
 ```html
-<a href="#" ga-click-event-track-multiplicity="1" data-ga-click-event-category="Videos" data-ga-click-event-action="Play" data-ga-click-event-label="Rick astley - never gonna give you up">Play</a>
+<a href="#" data-ga-click-event-category="Videos" data-ga-click-event-action="Play" data-ga-click-event-label="Rick astley - never gonna give you up" ga-click-event-track-multiplicity="1">Play</a>
 
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
