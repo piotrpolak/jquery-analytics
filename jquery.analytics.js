@@ -40,7 +40,7 @@
             var $clickedElement = $(this);
 
             // GA parameters to be read from the element
-            var dataParemeters = ['ga-click-event-category', 'ga-click-event-action', 'ga-click-event-label', 'ga-click-event-value', 'ga-click-event-implicit-count'];
+            var dataParameters = ['ga-click-event-category', 'ga-click-event-action', 'ga-click-event-label', 'ga-click-event-value', 'ga-click-event-implicit-count'];
 
             // Data array initialization
             var data = ['_trackEvent'];
@@ -48,7 +48,7 @@
             var skip = false;
 
             // Walking trough the list of allowed parameters
-            $.each(dataParemeters, function (index, value) {
+            $.each(dataParameters, function (index, value) {
                 if (skip) {
                     return; // break
                 }
