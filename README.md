@@ -1,17 +1,17 @@
 # jQuery Analytics
 
-Google Analytics event tracking defined in HTML made easy
+Google Analytics event tracking defined in HTML made easy. The plugin allows one to define Google Analitics events data using HTML tag attributes.
 
 ## Possible HTML element attributes
 
-| Name          						    |            | Explanation
-| ------------------------------------------|:-----------|:-----------------------------------------------------------------------------------------------------------------------:|
-| data-ga-click-event-category      		| COMPULSORY | Event category (example Videos)
-| data-ga-click-event-action       			| optional   | Event action (example Play)
-| data--click-event-label					| optional   | Event label  (example Rick astley - never gonna give you up)
-| data-ga-click-event-value					| optional   | Event value (example, number of seconds)
-| data-ga-click-event-implicit-count		| optional   | Implicit count
-| data-ga-click-event-track-multiplicity	| optional   | Specifies how many times the event should be pushed for repeating actions - default 0 meaning every click will be tracked
+| Name          						    |            | Explanation                                                                                                 | Example
+| ------------------------------------------|:-----------|:------------------------------------------------------------------------------------------------------------|:--------------------------------------------------:|
+| data-ga-click-event-category      		| COMPULSORY | [Category](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Categories)  | Videos
+| data-ga-click-event-action       			| optional   | [Action](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Actions)       | Play
+| data-click-event-label					| optional   | [Label](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Labels)         | Rick astley - never gonna give you up
+| data-ga-click-event-value					| optional   | [Value](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Count)          | 3 (number of seconds)
+| data-ga-click-event-implicit-count		| optional   | [Implicit count](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Count) |
+| data-ga-click-event-track-multiplicity	| optional   | Specifies how many times the event should be pushed for repeating actions - default 0 meaning every click will be tracked | 1
 
 More information: https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
 
