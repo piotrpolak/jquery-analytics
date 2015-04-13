@@ -31,7 +31,7 @@
             // Checking whether there is GA initialized
             if (!testGaq())
             {
-                if (typeof console.log === "function") {
+                if (typeof console !== 'undefined' && typeof console.log === "function") {
                     console.log('_gaq.push is not a function. Make sure Google Analytics is initialized');
                 }
                 return;
@@ -81,7 +81,7 @@
             // In case data-ga-click-event-category was there but empty
             if (data.length > 1)
             {
-                if (typeof console.log === "function") {
+                if (typeof console !== 'undefined' && typeof console.log === "function") {
                     console.log('GA event tracked', data);
                 }
 
