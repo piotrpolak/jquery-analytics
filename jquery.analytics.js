@@ -40,7 +40,7 @@
             var $clickedElement = $(this);
 
             // GA parameters to be read from the element
-            var dataParemeters = ['ga-click-event-category', 'ga-click-event-action', 'ga-click-event-label', 'ga-click-event-value', 'ga-click-event-implicit-count'];
+            var dataParemeters = ['ga-click-event-category', 'ga-click-event-action', 'ga-click-event-label', 'ga-click-event-value'];
 
             // Data array initialization
             var data = ['_trackEvent'];
