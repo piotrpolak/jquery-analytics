@@ -54,8 +54,6 @@ $(document).ready(function()
   })();
 </script>
 ```
-<<<<<<< HEAD
 
 ### License
-=======
->>>>>>> 10e6dd6ffa1514b7b47ccecbbebff50af45d0ad2
+The plugin is licensed under MIT license. See [LICESNSE.txt]
