@@ -56,4 +56,4 @@ $(document).ready(function()
 ```
 
 ### License
-The plugin is licensed under MIT license. See [LICESNSE.txt](./LICESNSE.txt)
+The plugin is licensed under MIT license. See [LICENSE.txt](./LICENSE.txt)
