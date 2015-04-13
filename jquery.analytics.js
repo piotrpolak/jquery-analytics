@@ -1,7 +1,8 @@
 /**
- * @author Piotr Polak
- * @version 0.1.1
- * @date 05.08.2014
+ * @author Piotr Polak <piotr (*) polak * ro>
+ * @version 0.1.2
+ * @date 13.04.2015
+ * @license MIT
  * @url https://github.com/piotrpolak/jquery-analytics
  * @see https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
  *

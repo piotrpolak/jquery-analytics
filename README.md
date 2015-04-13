@@ -6,7 +6,7 @@ Google Analytics event tracking defined in HTML made easy. The plugin allows one
 
 | Name          						    |            | Explanation                                                                                                 | Example
 | ------------------------------------------|:-----------|:------------------------------------------------------------------------------------------------------------|:--------------------------------------------------:|
-| data-ga-click-event-category      		| COMPULSORY | [Category](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Categories)  | Videos
+| data-ga-click-event-category      		| REQUIRED   | [Category](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Categories)  | Videos
 | data-ga-click-event-action       			| optional   | [Action](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Actions)       | Play
 | data-click-event-label					| optional   | [Label](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Labels)         | Rick astley - never gonna give you up
 | data-ga-click-event-value					| optional   | [Value](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide#Values)         | 3 (number of seconds)
@@ -55,3 +55,5 @@ $(document).ready(function()
   })();
 </script>
 ```
+
+### License
