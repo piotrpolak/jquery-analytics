@@ -16,7 +16,12 @@
 
         // Tests whether Google Analytics is present
         function testGaq() {
-            // Testing whether _gaq variable is present and push is callable
+            // Testing whether ga variable is present and is callable (Universal Analytics)
+            if (typeof ga === "function") {
+                return true;
+            }
+
+            // Testing whether _gaq variable is present and push is callable (deprecated ga.js library)
             if (typeof _gaq !== 'undefined' && typeof _gaq.push === "function") {
                 return true;
             }
@@ -24,6 +29,17 @@
             return false;
         }
 
+        // Sends the requested event
+        function sendEvent(data) {
+            if (typeof ga === "function") {
+                return ga.apply(null, ['send', 'event'].concat(data));
+            }
+
+            if (typeof _gaq !== 'undefined' && typeof _gaq.push === "function") {
+                return _gaq.push(['_trackEvent'].concat(data));
+            }
+        }
+        
         // Adding click and tap event listeners to selected elements
         // At least data-ga-click-event-category attribute must be defined
         $('*[data-ga-click-event-category]', $element).on("click tap", function (event) {
@@ -32,7 +48,7 @@
             if (!testGaq())
             {
                 if (typeof console.log === "function") {
-                    console.log('_gaq.push is not a function. Make sure Google Analytics is initialized');
+                    console.log('Neither ga nor _gaq.push is a function. Make sure Google Analytics is initialized');
                 }
                 return;
             }
@@ -43,7 +59,7 @@
             var dataParemeters = ['ga-click-event-category', 'ga-click-event-action', 'ga-click-event-label', 'ga-click-event-value', 'ga-click-event-implicit-count'];
 
             // Data array initialization
-            var data = ['_trackEvent'];
+            var data = [];
             // Used for breaking the loop
             var skip = false;
 
@@ -86,7 +102,7 @@
                 }
 
                 // Pushing the event
-                _gaq.push(data);
+                sendEvent(data);
             }
 
         });
